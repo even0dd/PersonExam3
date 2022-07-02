@@ -1,10 +1,11 @@
+
 import java.util.LinkedList;
 
 public class Main {
     static LinkedList<Person> p = new LinkedList<>();
     public static void main(String[] args) {
         personAdd(new Person("Alex","Dmitriev","Petrovich"),
-                new Person("Alx","Dmitriev","Petrovich"),
+                new Person("Alex","Dmitriev","Petrovich"),
                 new Person("Dmitrii","Seregeev","Kirillov"));
 
     }
@@ -17,12 +18,11 @@ public class Main {
                     p.get(i).getSurname().equals(p.get(i+1).getSurname())&&
                     p.get(i).getPatronymic().equals(p.get(i+1).getPatronymic())) {
                 throw new Error("Two people is duplicated");
-            } else {
-                System.out.println("Everything is ok");
-                break;
             }
 
         }
+        System.out.println("Everything is ok");
+
+
     }
 }
-
